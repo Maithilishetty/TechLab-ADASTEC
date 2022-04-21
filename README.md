@@ -23,10 +23,21 @@ Faster R-CNN is a deep convolutional network that is used extensively for the pu
   ```
   python to_tfrecord.py --train_yaml <path_to_train_yaml> --test_yaml <path_to_test_yaml> -dataset_folder <path_to_unzipped_data_folder> 
   ```
-- Edit the generated tfrecord and label map files in the faster R-CNN config file (marked as PATHTO). Additonally, also edit the fine_tune_checkpoint path to point to the weights of the pretrained faster R-CNN inception model which was previously downloaded 
+- Edit the config file in the faster R-CNN config folder to point to the tfrecords and label map files (marked as PATHTO). Additonally, also edit the fine_tune_checkpoint path to point to the weights of the pretrained faster R-CNN inception model which was previously downloaded 
 - Change directory into the donwloaded TensorFlow Object Detection folder 
 - To start training, run: 
   ```
   python legacy/train.py --logtostderr --train_dir=./models/train/ --pipeline_config_path=/PATHTO/config/faster_rcnn_inception_v2_coco.config
   ```
+- To generate a frozen model for evaluation, run: 
+  ```
+  python export_inference_graph.py --input_type image_tensor --pipeline_config_path /PATHTO/config/faster_rcnn_inception_v2_coco.config --  trained_checkpoint_prefix ./models/train/model.ckpt --output_directory models
+  ```
+- To evaluate and obtain the mAP values, run: 
+  ```
+   python eval.py --logtostderr --checkpoint_dir=/ATHTO/checkpoint_dir --eval_dir=path/to/eval_dir --pipeline_config_path=path/to/pretrained_model.config
+  ``` 
 
+## Results 
+
+TODO
