@@ -39,5 +39,10 @@ Faster R-CNN is a deep convolutional network that is used extensively for the pu
   ``` 
 
 ## Results 
+<img src="images/demo_yolo.png" alt="demo_yolo">
 
-TODO
+<img src="images/demo_faster-rcnn.png" alt="demo_faster-rcnn">
+
+<img src="images/chart_6000.png" alt="training loss">
+
+<img src="images/chart_10000.png" alt="training loss + validation map">
