@@ -393,3 +393,10 @@ After training done try it with:
 <img src="images/chart_6000.png" alt="training loss">
 
 <img src="images/chart_10000.png" alt="training loss + validation map">
+
+## References:
+
+1. <a href="https://github.com/AlexeyAB/darknet"> YOLO Github Repo </a>
+2. <a href="https://hci.iwr.uni-heidelberg.de/node/6132"> BOSCH Traffic Lights Dataset</a>
+3. <a href="https://github.com/bosch-ros-pkg/bstld"> Bosch Small Traffic Lights Dataset Github Repository</a>
+4. <a href="https://github.com/berktepebag/Traffic-light-detection-with-YOLOv3-BOSCH-traffic-light-dataset"> Traffic-light-detection-with-YOLOv3-BOSCH-traffic-light-dataset</a>
